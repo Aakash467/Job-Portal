@@ -159,7 +159,7 @@ export default function Applicants() {
                         variant="contained"
                         color="primary.main"
                         startIcon={<Description />}
-                        href={app.applicant.profile.resume ? `https://job-portal-xi-beryl.vercel.app/uploads/${app.applicant.profile.resume.split('/').pop()}` : '#'}
+                        href={app.applicant.profile.resume ? `https://job-portal-of27.onrender.com/uploads/${app.applicant.profile.resume.split('/').pop()}` : '#'}
                         target="_blank"
                         sx={{ mb: 2 }}
                         disabled={!app.applicant.profile.resume}
