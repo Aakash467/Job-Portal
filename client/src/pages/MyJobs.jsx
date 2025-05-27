@@ -33,8 +33,7 @@ export default function MyJobs() {
       try {
         const token = localStorage.getItem("token");
         const res = await axios.get(`${API_URL}/jobs/getadminjobs`, {
-          headers: { Authorization: `Bearer ${token}` },
-          withCredentials: true,
+          headers: { Authorization: `Bearer ${token}` }
         });
         setJobs(res.data.jobs || []);
       } catch (err) {
