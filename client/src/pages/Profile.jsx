@@ -49,7 +49,7 @@ export default function Profile() {
               background: 'linear-gradient(45deg, #3b82f6, #6366f1)'
             }}>
               <img 
-                src={`http://localhost:3000/uploads/${user.profile.profilePicture.split('/').pop()}`} 
+                src={`https://job-portal-xi-beryl.vercel.app/uploads/${user.profile.profilePicture.split('/').pop()}`} 
                 alt="Profile" 
                 style={{ 
                   width: '140px',
@@ -266,7 +266,7 @@ export default function Profile() {
                     {user.profile.resumeFileName || 'Resume.pdf'}
                   </div>
                   <a
-                    href={`http://localhost:3000/uploads/${user.profile.resume.split('/').pop()}`}
+                    href={`https://job-portal-xi-beryl.vercel.app/uploads/${user.profile.resume.split('/').pop()}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
