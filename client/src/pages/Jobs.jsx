@@ -11,8 +11,7 @@ export default function Jobs() {
       try {
         const token = localStorage.getItem('token');
         const res = await axios.get(`${API_URL}/applications/my-applications`, {
-          headers: { Authorization: `Bearer ${token}` },
-          withCredentials: true
+          headers: { Authorization: `Bearer ${token}` }
         });
         setAppliedJobs(res.data.applications || []);
       } catch (error) {
