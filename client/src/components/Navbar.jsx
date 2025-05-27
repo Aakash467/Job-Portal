@@ -173,7 +173,7 @@ const Navbar = () => {
                   }}
                 >
                   <Avatar 
-                    src={user?.profile?.profilePicture ? `http://localhost:3000/uploads/${user.profile.profilePicture.split('/').pop()}` : undefined}
+                    src={user?.profile?.profilePicture ? `https://job-portal-xi-beryl.vercel.app/uploads/${user.profile.profilePicture.split('/').pop()}` : undefined}
                     sx={{ width: 32, height: 32 }}
                   >
                     {!user.profile?.profilePicture && <AccountCircle fontSize="medium" />}
