@@ -13,8 +13,7 @@ export default function JobDetails() {
       try {
         const token = localStorage.getItem("token");
         const res = await axios.get(`${API_URL}/jobs/getjob/${id}`, {
-          headers: { Authorization: `Bearer ${token}` },
-          withCredentials: true,
+          headers: { Authorization: `Bearer ${token}` }
         });
         setJob(res.data.job);
       } catch (err) {
@@ -28,8 +27,7 @@ export default function JobDetails() {
     try {
       const token = localStorage.getItem("token");
       const res = await axios.post(`${API_URL}/applications/apply/${id}`, {}, {
-        headers: { Authorization: `Bearer ${token}` },
-        withCredentials: true
+        headers: { Authorization: `Bearer ${token}` }
       });
       if (res.status === 201) {
         setApplied(true);
