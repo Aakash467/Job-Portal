@@ -18,8 +18,7 @@ export default function Browse() {
       try {
         const token = localStorage.getItem("token");
         const res = await axios.get(`${API_URL}/jobs/getalljobs`, {
-          headers: { Authorization: `Bearer ${token}` },
-          withCredentials: true,
+          headers: { Authorization: `Bearer ${token}` }
         });
         setJobs(res.data.jobs);
       } catch (err) {
@@ -37,8 +36,7 @@ export default function Browse() {
     try {
       const token = localStorage.getItem("token");
       const res = await axios.get(`${API_URL}/jobs/getalljobs?keywords=${encodeURIComponent(search)}`, {
-        headers: { Authorization: `Bearer ${token}` },
-        withCredentials: true,
+        headers: { Authorization: `Bearer ${token}` }
       });
       setJobs(res.data.jobs);
     } catch (err) {
