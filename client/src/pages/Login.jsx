@@ -40,9 +40,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${API_URL}/users/login`, formData, {
-        withCredentials: true,
-      });
+      const res = await axios.post(`${API_URL}/users/login`, formData);
       setMessage(res.data.message);
       login(res.data.token, res.data.user);
       navigate('/');
