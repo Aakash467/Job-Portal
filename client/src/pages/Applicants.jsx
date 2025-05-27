@@ -24,8 +24,7 @@ export default function Applicants() {
     try {
       const token = localStorage.getItem("token");
       const res = await axios.get(`${API_URL}/applications/job-applicants/${jobId}`, {
-        headers: { Authorization: `Bearer ${token}` },
-        withCredentials: true
+        headers: { Authorization: `Bearer ${token}` }
       });
       setApplications(res.data.applications || []);
     } catch (err) {
@@ -44,8 +43,7 @@ export default function Applicants() {
         `${API_URL}/applications/update-status/${id}/${status}`,
         {},
         {
-          headers: { Authorization: `Bearer ${token}` },
-          withCredentials: true
+          headers: { Authorization: `Bearer ${token}` }
         }
       );
       fetchApplications();
