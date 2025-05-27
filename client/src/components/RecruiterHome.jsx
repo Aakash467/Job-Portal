@@ -34,8 +34,7 @@ import {
         try {
           const token = localStorage.getItem("token");
           const res = await axios.get(`${API_URL}/jobs/getadminjobs/`, {
-            headers: { Authorization: `Bearer ${token}` },
-            withCredentials: true
+            headers: { Authorization: `Bearer ${token}` }
           });
           setJobCount(res.data.jobs?.length || 0);
         } catch (err) {
@@ -48,8 +47,7 @@ import {
         try {
           const token = localStorage.getItem("token");
           const res = await axios.get(`${API_URL}/applications/recruiter-applications`, {
-            headers: { Authorization: `Bearer ${token}` },
-            withCredentials: true
+            headers: { Authorization: `Bearer ${token}` }
           });
           setApplicantCount(res.data.applications?.length || 0);
         } catch (err) {
@@ -64,8 +62,7 @@ import {
         try {
           const token = localStorage.getItem("token");
           const res = await axios.get(`${API_URL}/companies/get`, {
-            headers: { Authorization: `Bearer ${token}` },
-            withCredentials: true
+            headers: { Authorization: `Bearer ${token}` }
           });
           setCompanies(res.data.companies || []);
         } catch (err) {
