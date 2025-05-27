@@ -21,23 +21,8 @@ dotenv.config();
 app.use(express.json());
 app.use(cookieParser());
 
-const allowedOrigins = [
-  process.env.CLIENT_URL,
-  "https://job-portal-xi-beryl.vercel.app/", 
-];
+app.use(cors());
 
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    credentials: true,
-  })
-);
 app.get('/', (req, res) => {
         return res.status(200).json({
             message: 'Welcome to the Job Portal API'
