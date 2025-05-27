@@ -28,8 +28,7 @@ export default function PostJob() {
         ...formData,
         requirements: formData.requirements.split(',').map(req => req.trim())
       }, {
-        headers: { Authorization: `Bearer ${token}` },
-        withCredentials: true
+        headers: { Authorization: `Bearer ${token}` }
       });
       alert('Job posted successfully!');
       setFormData({
